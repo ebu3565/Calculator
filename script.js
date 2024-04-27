@@ -7,11 +7,11 @@ function clearDisplay(){
  display.value = "";
 };
 
-function calculate(){
-  try{
-    display.value = eval(display.value);
+// Function to calculate the expression and display the result
+function calculate() {
+  try {
+    document.getElementById('display').value = eval(document.getElementById('display').value);
+  } catch (error) {
+    document.getElementById('display').value = 'Error';
   }
-  catch(error){
-    display.value = "Error";
-  }
-};
+}
